@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Lixo Eletrônico</title>
+    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="lixo.css">
+    <style>
+         .abas {
+            display: flex;
+            justify-content: center;
+            border: 1px solid black;
+            width: 95%;
+            margin: auto;
+        }
+
+        .aba {
+            flex: 1;
+            padding: 5px;
+            cursor: pointer;
+            border-right: 1px solid rgb(128, 128, 128);
+            background-color: white;
+            color: black;
+            font-weight: 600;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .aba:last-child {
+            border-right: none;
+        }
+
+        .aba.ativa {
+            background-color: #1aeca6;
+            color: white;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .conteudo {
+            width: 95%;
+            margin: auto;
+            padding: 15px;
+            border: 1px solid black;
+            background-color: white;
+            display: none;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            margin-bottom: 50px;
+        }
+
+        .conteudo.ativo {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navegation">
+            <a href="#" class="logo"><span>ANAC</span> AMBIENTAL</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" onclick="fecharMenu()">Home</a></li>
+                <li class="nav-item"><a href="lixo.html" onclick="fecharMenu()">Lixo Eletrônico</a></li>
+                <li class="nav-item"><a href="ambiente.html" onclick="fecharMenu()">Meio Ambiente</a></li>
+                <li class="nav-item"><a href="empresas.html" onclick="fecharMenu()">Empresas</a></li>
+                <li class="nav-item"><a href="https://www.instagram.com/anac_ambiental/" onclick="fecharMenu()">Posts</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section class="home">
+            <div class="home-text">
+                <h1 class="text-h1">O que é Lixo Eletrônico?</h1>
+                <p>O lixo eletrônico, também chamado de e-lixo ou resíduos de equipamento eletroeletrônico (REEE), engloba dispositivos elétricos e eletrônicos descartados por não terem mais utilidade, como celulares, computadores, televisores, eletrodomésticos e baterias. Com o avanço da tecnologia e o consumo crescente desses produtos, a geração de resíduos eletrônicos tem aumentado significativamente, tornando-se um grande desafio ambiental. Muitos desses equipamentos contêm substâncias tóxicas, como mercúrio, chumbo e cádmio, que podem contaminar o solo, a água e o ar se descartados de forma inadequada, colocando em risco a saúde humana e o meio ambiente. <br><br>
+
+                Em vez de serem enviados para aterros sanitários, onde podem causar poluição e desperdício de recursos, os resíduos eletrônicos devem ser encaminhados para reciclagem e descarte correto. A recuperação de materiais valiosos, como ouro, prata e cobre, reduz a necessidade de extração de novos recursos naturais e contribui para a economia circular. Além disso, a adoção de práticas sustentáveis, como o consumo consciente, a reutilização de equipamentos e a destinação adequada em pontos de coleta autorizados, é essencial para minimizar os impactos ambientais e promover um futuro mais sustentável. 🌱♻️</p>
+            </div>
+            <div class="home-img">
+                <img src="img/forca-vento.png" alt="logo">
+            </div>
+        </section>
+
+        <section class="home">
+            <div class="home-text">
+                <p>O lixo eletrônico pode ser classificado em quatro categorias básicas, cada uma com especificações diferentes quanto ao tamanho e aplicação e que se não forem descartados e manuseados de forma correta, podem causar impactos negativos para o meio ambiente e consequentemente a saúde humana.Veja abaixo quais são as categorias: <br><br>
+
+                1- Grandes equipamentos: geladeiras, freezers, máquinas de lavar, fogões, ar condicionados, microondas, grandes TVs, etc. <br><br>
+
+                2- Pequenos equipamentos e eletroportáteis: torradeiras, batedeiras, aspiradores de pó, ventiladores, mixers, secadores de cabelo, ferramentas elétricas, calculadoras, câmeras digitais, rádios, etc. <br><br>
+
+                3- Equipamentos de informática e telefonia: computadores, tablets, notebooks, celulares, impressoras, monitores e outros. <br><br>
+
+                4- Pilhas e bateria portáteis: pilhas modelos AA, AAA, recarregáveis, baterias portáteis de 9 V, etc. <br><br>
+
+                Leia Mais Sobre:</p>
+            </div>
+            <div class="home-img">
+                <img src="img/ar.png" alt="logo">
+            </div>
+            
+        </section>
+
+        <div class="abas">
+            <div class="aba ativa" onclick="mostrarConteudo(0)">Legislação</div>
+            <div class="aba" onclick="mostrarConteudo(1)">Reciclagem</div>
+            <div class="aba" onclick="mostrarConteudo(2)">Coleta e Descarte</div>
+        </div>
+    
+        <div class="conteudo ativo">
+            <p>A partir dessa necessidade, a lei nº 9.605, regente desde 1998, foi alterada, dando origem a lei federal nº 12.305, que trata sobre a regularização do descarte de resíduos eletrônicos e que faz com que seja instituída a Política Nacional de Resíduos Sólidos. <br><br>
+
+            Art. 9° É terminantemente proibida à remessa, o envio, a venda, o descarte e o tráfico de lixo eletrônico entre países, estados e municípios. §1° Cumpre ao Poder Público competente a fiscalização e a prevenção deste tipo de crime, com a adoção das medidas necessárias. <br><br>
+                
+            A Legislação diz sobre o descarte diz que na verdade, o descarte inadequado de lixo é proibido no Brasil desde 1954, pela Lei 2.312 de 3 de setembro, pelo Código Nacional da Saúde. Essa proibição foi reforçada em 1981 pela Política Nacional de Meio Ambiente, e recentemente, 2010, pela Política Nacional dos Resíduos Sólidos.</p>
+        </div>
+    
+        <div class="conteudo">
+            <p><strong>Seu lixo eletrônico pode ser reciclado e reaproveitado da melhor maneira</strong> <br>
+            A reciclagem de lixo eletrônico é um processo altamente viável para evitar que esses artigos gerem danos ao meio ambiente e ao solo depois de um descarte irregular em qualquer que seja o local. Quando descartado de maneira incorreta, esses materiais podem causar danos à saúde das pessoas, de animais, entre diversas outras consequências negativas, por isso, a reciclagem de lixo eletrônico se faz cada vez mais necessária conforme os avanços tecnológicos. <br><br></p>
+
+            <p><strong>Processo de reciclagem do lixo eletrônico:</strong><br>
+            É sempre importante contar com uma empresa especializada neste procedimento para que assim ele tenha todas as etapas feitas corretamente. A reciclagem de lixo eletrônico desmonta os aparelhos após seu recebimento e classifica cada material encontrado, como plástico, placas de circuitos, vidros, metais, metais pesados, elementos químicos e outros. Com isso, cada um tem uma destinação correta para que não afete o meio ambiente. <br><br></p>
+
+            <p><strong>Prestação de serviços qualificada</strong><br>
+            A VR Gestão de Resíduos é uma empresa com total foco em dar um destino correto para materiais que seriam descartados de maneira incorreta no solo. Sua prestação de serviços visa o gerenciamento de resíduos industriais, o transporte e a destinação correta, como a reciclagem de lixo eletrônico , por exemplo. Com atendimento no interior do Estado de São Paulo, em um raio de 150 quilômetros da cidade de Piracicaba, a VR Gestão de Resíduos conta com profissionais extremamente qualificados para atender da melhor forma todas as demandas apresentadas.</p>
+        </div>
+    
+        <div class="conteudo">
+            <p><strong>Como é a coleta do lixo eletrônico?</strong><br>
+                O lixo eletrônico deve ser sempre separado dos resíduos orgânicos e dos materiais recicláveis, como papel, plástico e vidro. Pesquise por pontos de coleta. Procure empresas especializadas no descarte ecológico de equipamentos eletrônicos ou locais de postos de coleta. Devolva aos fabricantes. <br><br>
+                
+                <strong>Qual é a importância do descarte correto do lixo eletrônico?</strong><br>
+                Os equipamentos elétricos e eletrônicos possuem diversos componentes tóxicos em suas estruturas. Se descartados de maneira incorreta, esses resíduos podem contaminar o solo e os lençóis freáticos, colocando em risco a saúde pública. <br><br>
+                
+                <strong>Quais cuidados são necessários para o descarte de lixo eletrônico?</strong><br>
+                Recorra a programas de coleta seletiva. Em hipótese alguma os eletrônicos devem ser descartados em lixo comum. Isso porque muitos desses itens têm substâncias nocivas ao meio ambiente, como chumbo ou mercúrio. Se o descarte é inevitável, procure então programas de coleta seletiva. <br><br>
+                
+                <strong>Quais problemas o lixo eletrônico causa?</strong><br>
+                Por serem feitos com alta tecnologia, esses resíduos podem conter substâncias tóxicas e metais pesados, como o chumbo, mercúrio, cromo e cádmio por exemplo, capazes de contaminar o solo, a água e os alimentos – impactando tanto o ambiente quanto a saúde humana</p>
+        </div>
+        </main>
+
+    <script src="script.js"></script>
+    <script>
+        function mostrarConteudo(index) {
+            let abas = document.querySelectorAll('.aba');
+            let conteudos = document.querySelectorAll('.conteudo');
+
+            abas.forEach((aba, i) => {
+                if (i === index) {
+                    aba.classList.add('ativa');
+                    conteudos[i].classList.add('ativo');
+                } else {
+                    aba.classList.remove('ativa');
+                    conteudos[i].classList.remove('ativo');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

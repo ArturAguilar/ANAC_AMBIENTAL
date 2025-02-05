@@ -13,9 +13,6 @@
             background-color: white;
             color: black;
         }
-        main{
-            margin-top: 50px;
-        }
 
         .navegation{
             display: flex;
@@ -77,12 +74,14 @@
             background-color: #1aeca6;
         }
 
+        main{
+            margin-top: 50px;
+        }
         .home{
             width: 100%;
-            margin-top: 50px;
             display: flex;
-            align-items:center;
-            justify-content: space-between;
+            align-items: center;
+            justify-content:space-between;
             padding: 0px 2%;
         }
 
@@ -103,7 +102,7 @@
         }
 
         .home-text p{
-            margin-bottom: 4rem;
+            font-size: 16px;
         }
 
         .home-btn{
@@ -166,10 +165,9 @@
             }
 
             .home{
-                padding: 100px 2%;
+                padding: 10px 2%;
                 flex-direction: column;
                 overflow: hidden;
-                text-align: center;
                 gap: 2rem;
             }
 
@@ -183,10 +181,12 @@
             }
 
             .home p{
-                font-size: 15px;
+                font-size:18px;
+                
             }
 
             .home-img{
                 width: 100%;
+                align-items: center;
             }
         }
