@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>Document</title>
-    
+    <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
         *{
             margin: 0;
             padding: 0;
-            /*box-sizing: border-box;*/
+            box-sizing: border-box;
             font-family: 'Poppins', sans-serif;
             list-style: none;
             text-decoration: none;
         }
 
-        /*body{
+        body{
             background-color: white;
             color: black;
-        }*/
+        }
 
         .navegation{
             display: flex;
@@ -29,19 +29,19 @@
             justify-content: space-between;
             padding: 18px 40px;
             box-shadow: 0 0.1rem 0.5rem #ccc;
-            background-color: #5ed8af;
+            background-color: white;
             transition: all 0.5s;
         }
 
-        /*.navegation .logo{
-            color: ;
+        .navegation .logo{
+            color: #727272;
             font-size: 1.7rem;
             font-weight: 600;
-        }*/
+        }
 
-        /*.logo span{
-            color: black;
-        }*/
+        .logo span{
+            color: #1aeca6;
+        }
 
         .navegation ul{
             display: flex;
@@ -50,25 +50,19 @@
         }
 
         .navegation ul li a{
-            color: white;
+            color: #1aeca6;
             font-size: 17px;
             font-weight: 500;
             transition: all 0.5s;
         }
 
         .navegation ul li a:hover{
-            color: #5ed8af;
-            padding: 5px;
-            background-color: white;
+            color:white;
+            padding: 10px;
+            background-color: #1aeca6;
             border-radius: 10px;
             transition: all 0.5s;
         }
-
-        /*.navegation i{
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: white;
-        }*/
 
        .menu{
             cursor: pointer;
@@ -80,16 +74,62 @@
             width: 28px;
             height: 3px;
             border-radius: 3px;
-            background: #fff;
+            background: #727272;
             margin: 5px auto ;
             transition: all 0.3s;
         }
 
-       /* .menu .bar:nth-child(1), .menu .bar:nth-child(3){
-            background-color: #5ed8af;
-        }*/
+       .menu .bar:nth-child(1), .menu .bar:nth-child(3){
+            background-color: #1aeca6;
+        }
 
-        @media (max-width : 785px){
+        .home{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0px 10%;
+        }
+
+        .home-text{
+            max-width: 37rem;
+        }
+
+        .home-text .text-h4{
+            font-size: 1.5rem;
+            color: #1aeca6;
+            margin-bottom: 1rem;
+        }
+
+        .home-text .text-h1{
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            line-height: 4rem;
+        }
+
+        .home-text p{
+            margin-bottom: 4rem;
+        }
+
+        .home-btn{
+            padding: 15px 45px;
+            background-color: #1aeca6;
+            color: white;
+            border-radius: 10px;
+            font-weight: 700;
+            transition: all 0.5s;
+        }
+
+        .home-btn:hover{
+            background-color: #02aa72;
+        }
+
+        .home-img img{
+            width: 100%;
+        }
+
+        @media (max-width : 900px){
             .navegation{
                 padding: 18px 20px;
             }
@@ -114,17 +154,46 @@
             .nav-menu{
                 position: fixed;
                 right: -100%;
-                top: 105px;
+                top: 70px;
                 width: 100%;
                 height: 100%;
                 flex-direction: column;
-                background-color: #5ed8af;
+                background-color: white;
                 gap: -10px;
                 transition: 0.3s;
             }
 
             .nav-menu.ativo{
                 right: 0;
+            }
+
+            .nav-item{
+                margin: 16px 0;
+            }
+
+            .home{
+                padding: 100px 2%;
+                flex-direction: column;
+                overflow: hidden;
+                text-align: center;
+                gap: 2rem;
+            }
+
+            .home .text-h4{
+                font-size: 15px;
+            }
+
+            .home .text-h1{
+                font-size: 2.5rem;
+                line-height: 3rem;
+            }
+
+            .home p{
+                font-size: 15px;
+            }
+
+            .home-img{
+                width: 70%;
             }
         }
 
@@ -133,15 +202,13 @@
 <body>
     <header>
         <nav class="navegation">
-            <img class="logo" src="logo.png" alt="logo" width="200" height="100">
-            <!--<a href="#" class="logo"><span>ANAC</span>AMBIENTAL</a>-->
+            <a href="#" class="logo"><span>ANAC</span> AMBIENTAL</a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#home" onclick="fecharMenu()">Início</a></li>
                 <li class="nav-item"><a href="#servicos" onclick="fecharMenu()">Serviços</a></li>
                 <li class="nav-item"><a href="#produtos" onclick="fecharMenu()">Produtos</a></li>
                 <li class="nav-item"><a href="#sobre" onclick="fecharMenu()">Sobre Nós</a></li>
                 <li class="nav-item"><a href="#contato" onclick="fecharMenu()">Contato</a></li>
-                <!--<i class='bx bx-search'></i>-->
             </ul>
             <div class="menu">
                 <span class="bar"></span>
@@ -151,8 +218,17 @@
         </nav>
     </header>
     <main>
-        <section>
-
+        <section class="home">
+            <div class="home-text">
+                <h4 class="text-h4">Welcome Anac Ambiental</h4>
+                <h1 class="text-h1">Vamos Cuidar do Meio Ambiente!</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo mollitia magnam velit, corporis quaerat deleniti aliquid officiis doloribus nulla. Porro esse exercitationem officiis ipsum labore unde provident non saepe similique.</p>
+                <a class="home-btn"href="#5ed8af">Sobre Nós</a>
+            </div>
+            <div class="home-img">
+                <img src="img/ambiente.png" alt="logo
+                ">
+            </div>
         </section>
     </main>
 
